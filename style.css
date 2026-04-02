@@ -15,6 +15,7 @@
 /* Smooth scroll behavior */
 html {
     scroll-behavior: smooth;
+    font-size: 19px;
 }
 
 /* Base styles */
@@ -25,6 +26,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    font-size: 19px;
 }
 
 /* Sticky Navigation Bar */
@@ -95,7 +97,7 @@ body {
 }
 
 .profile-left {
-    flex: 0 0 280px;
+    flex: 0 0 300px;
     text-align: center;
 }
 
