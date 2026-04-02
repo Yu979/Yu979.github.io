@@ -151,6 +151,13 @@ body {
     margin-bottom: 1rem;
 }
 
+.bio-right .job-market {
+    color: #cc0000;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    line-height: 1.5;
+}
+
 /* Awards Section */
 .awards-list {
     list-style: none;
