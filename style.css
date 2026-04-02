@@ -1,0 +1,342 @@
+/* Modern Academic Homepage Styles */
+
+/* CSS Variables for consistent colors */
+:root {
+    --primary-blue: #224b8d;
+    --accent-blue: #527bbd;
+    --light-blue: #e8f0f8;
+    --dark-gray: #333333;
+    --medium-gray: #666666;
+    --light-gray: #f6f6f6;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base styles */
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--dark-gray);
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Sticky Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px var(--shadow);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2rem;
+}
+
+.navbar a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    padding: 1rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    color: var(--accent-blue);
+    background-color: var(--light-blue);
+    border-bottom-color: var(--accent-blue);
+}
+
+.navbar a.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+}
+
+/* Main content wrapper */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Section styles */
+.content-section {
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-blue);
+}
+
+/* About Section - Two column layout */
+.about-container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.profile-left {
+    flex: 0 0 280px;
+    text-align: center;
+}
+
+.profile-left img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.profile-left h1 {
+    color: var(--primary-blue);
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+}
+
+.profile-left .position {
+    color: var(--medium-gray);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    margin-top: 1rem;
+}
+
+.contact-info a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.bio-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.bio-right h2 {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.bio-right p {
+    margin-bottom: 1rem;
+}
+
+/* Awards Section */
+.awards-list {
+    list-style: none;
+    padding: 0;
+}
+
+.awards-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.awards-list li:last-child {
+    border-bottom: none;
+}
+
+/* Publications - Card based design */
+.publication-list {
+    counter-reset: pub-counter;
+}
+
+.publication-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.pub-number {
+    flex: 0 0 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pub-content {
+    flex: 1;
+}
+
+.pub-content h3 {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+}
+
+.pub-content .authors {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    margin: 0.3rem 0;
+}
+
+.pub-content .authors b {
+    color: var(--primary-blue);
+}
+
+.pub-content .journal {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.pub-content .journal em strong {
+    color: var(--primary-blue);
+}
+
+.pub-content a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.pub-content a:hover {
+    text-decoration: underline;
+}
+
+/* Experience Section */
+.experience-list {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-item {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+}
+
+.experience-item .time {
+    color: var(--accent-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.experience-item .title {
+    color: var(--dark-gray);
+    font-size: 1rem;
+    margin: 0.3rem 0;
+}
+
+.experience-item .advisor {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+/* Teaching Section */
+.teaching-list {
+    padding-left: 1.5rem;
+}
+
+.teaching-list li {
+    padding: 0.5rem 0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--medium-gray);
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .profile-left {
+        flex: none;
+        width: 100%;
+    }
+
+    .profile-left img {
+        width: 150px;
+    }
+
+    .publication-card {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .pub-number {
+        flex: none;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
